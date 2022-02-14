@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* This is an input file and also custom css file */
+
+/* ---------------        ART      -------------- */
+
+.art {
+  background-image: url("../images/bg-pattern-circles.svg"),
+    linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  background-repeat: no-repeat, no-repeat;
+  background-size: 60%, 100%;
+  background-position: top 80% left -15%, center;
+}
+
+@media screen and (max-width: 768px) {
+  .art {
+    background-size: 150%, 100%;
+    background-position: center -13rem, center;
+  }
+}
+
+/* Did NOT loaded in tailwind classes - prob. css conflict */
+@media screen and (min-width: 1024px) {
+  .benefits .benefits__content {
+    padding-top: 1px;
+  }
+}
+
+/* ----- NAVBAR FUNCTIONALITY ------ */
+
+@media screen and (max-width: 767px) {
+  .nav {
+    background-color: #fff;
+    position: absolute;
+    top: 125px;
+    right: 50%;
+    width: 90%;
+    height: auto;
+    transform: translate(50%, 0);
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: all 0.3s;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .nav-open .nav {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav-open .menu-icon {
+    display: none;
+  }
+  .nav-open .close-icon {
+    display: block;
+  }
+
+  .dd-active .dd-menu > li:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .dd-active .dd-menu {
+    display: block;
+  }
+
+  .dd-active .arrow-dark {
+    transform: rotate(-180deg);
+  }
+
+  .mob-btns:last-child {
+    padding-bottom: 1.875rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .dd-active .dd-menu > li::before {
+    display: inline-block;
+    content: attr(data-text);
+    font-weight: 600;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  .dd-active .dd-menu > li:hover {
+    font-weight: 600;
+  }
+
+  .dd-active .dd-menu > li:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .dd-active .dd-menu {
+    display: block;
+  }
+  .dd-active .arrow-dark,
+  .dd-active .arrow-light {
+    transform: rotate(-180deg);
+  }
+}
+
+.footer__list > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.nav__list > * {
+  @apply mb-35 md:mb-0;
+}
+
+.nav__link {
+  @apply hover:inline-block  hover:border-solid hover:border-b-2 hover:border-white hover:-mb-[2px] mb-8 text-sm  text-center md:text-white font-ub text-gb-450 md:text-left md:mb-0;
+}
+
+.hero__btn {
+  @apply flex items-center justify-center text-sm font-bold rounded-full font-op;
+}
+
+.dd-menu {
+  @apply bg-gray-50 rounded-md relative my-4 mx-auto py-4 w-[280px] text-center hidden md:bg-white md:text-gb-450 md:rounded-md md:max-w-[170px] md:text-left md:absolute md:-left-[1.5rem] md:top-[2.5rem] md:hidden md:py-35 md:px-25 font-ub text-sm;
+}
+
+.footer__col > h4 {
+  @apply mb-40 font-medium text-center text-white xl:text-left font-ub;
+}
+
+.footer__list > * {
+  @apply font-light text-center text-gray-150 xl:text-left font-ub;
+}
+
+.footer__list > li > a {
+  @apply box-border  inline-block  hover:-mb-[2px] hover:border-b-2 hover:border-solid hover:border-white;
+}
