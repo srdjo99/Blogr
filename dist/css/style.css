@@ -1288,10 +1288,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 140px;
   }
 
-  .md\:mr-0 {
-    margin-right: 0px;
-  }
-
   .md\:block {
     display: block;
   }
