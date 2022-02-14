@@ -4,8 +4,7 @@
   "description": "![Design preview for the Blogr landing page coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss -i tailwind.css -o ./dist/css/style.css",
-    "dev": "npx tailwindcss -i tailwind.css -o ./dist/css/style.css --watch"
+    "dev": "npx tailwindcss -i tailwind.css -o dist/css/style.css "
   },
   "keywords": [],
   "author": "",
