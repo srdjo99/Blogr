@@ -653,6 +653,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 50px;
 }
 
+.h-0 {
+  height: 0px;
+}
+
 .w-140 {
   width: 140px;
 }
